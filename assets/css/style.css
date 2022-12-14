@@ -2,47 +2,50 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    color: #ffffff;
 }
 
 body {
     background-color: #d9dcd6;
 }
 
-.header {
+/* .header class redundent. Use header tag instead. */
+header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
-    color: #ffffff;
+    /* color: #ffffff; */
 }
 
-.header h1 {
+/* h1 is unique in index.html (tag used only once). Element call in CSS is sufficient */
+h1 {
     display: inline-block;
     font-size: 48px;
 }
 
-.header h1 .seo {
+/* Since h1 is unique, class="seo" isn't necessary. h1 span is sufficient. */
+h1 span {
     color: #d9dcd6;
 }
 
-.header div {
+nav {
     padding-top: 15px;
     margin-right: 20px;
     float: right;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
-}
-
-.header div ul {
+    margin-left: 25px;
     list-style-type: none;
 }
+/* div not necessary for ul/li styling in header. Moving list-style-type:none; into the "header ul li" section below (and commneting this one out) keeps website integrity and makes the code more concise, but I'm not sure if it is proper to do that/how list-style-type:none; applies to li in that case. From what I read list-style-type affects the list elements of a list, so it would make sense to me to just include that code snippet in the shared header ul li section.*/
 
-.header div ul li {
+/* nav li is sufficient and provides more detial then ul li (in the case a document has multiple unordered lists). */
+nav li {
     display: inline-block;
     margin-left: 25px;
 }
 
-a {
-    color: #ffffff;
+nav a {
     text-decoration: none;
 }
 
@@ -88,17 +91,17 @@ p {
 
 .benefit-lead {
     margin-bottom: 32px;
-    color: #ffffff;
+    /* color: #ffffff; */
 }
 
 .benefit-brand {
     margin-bottom: 32px;
-    color: #ffffff;
+    /* color: #ffffff; */
 }
 
 .benefit-cost {
     margin-bottom: 32px;
-    color: #ffffff;
+    /* color: #ffffff; */
 }
 
 .benefit-lead h3 {
@@ -140,7 +143,7 @@ p {
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
-    color: #ffffff;
+    /* color: #ffffff; */
 }
 
 .online-reputation-management {
@@ -149,7 +152,7 @@ p {
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
-    color: #ffffff;
+    /* color: #ffffff; */
 }
 
 .social-media-marketing {
@@ -158,7 +161,7 @@ p {
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
-    color: #ffffff;
+    /* color: #ffffff; */
 }
 
 .search-engine-optimization img {
