@@ -2,50 +2,47 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    color: #ffffff;
 }
 
 body {
     background-color: #d9dcd6;
 }
 
-/* .header class redundent. Use header tag instead. */
 header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
-    /* color: #ffffff; */
+    color: #ffffff;
 }
 
-/* h1 is unique in index.html (tag used only once). Element call in CSS is sufficient */
-h1 {
+header h1 {
     display: inline-block;
     font-size: 48px;
 }
 
-/* Since h1 is unique, class="seo" isn't necessary. h1 span is sufficient. */
-h1 span {
+header span {
     color: #d9dcd6;
 }
 
-nav {
+header nav {
     padding-top: 15px;
     margin-right: 20px;
     float: right;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
-    margin-left: 25px;
+}
+
+header nav ul {
     list-style-type: none;
 }
-/* div not necessary for ul/li styling in header. Moving list-style-type:none; into the "header ul li" section below (and commneting this one out) keeps website integrity and makes the code more concise, but I'm not sure if it is proper to do that/how list-style-type:none; applies to li in that case. From what I read list-style-type affects the list elements of a list, so it would make sense to me to just include that code snippet in the shared header ul li section.*/
 
-/* nav li is sufficient and provides more detial then ul li (in the case a document has multiple unordered lists). */
-nav li {
+header nav ul li {
     display: inline-block;
     margin-left: 25px;
 }
 
-nav a {
+header a {
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -53,7 +50,22 @@ p {
     font-size: 16px;
 }
 
-.hero {
+/* .footer isn't a necessary class when the footer tag exhists. It was moved up here to better flow with CSS specificity rules. */
+
+footer {
+    padding: 30px;
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 20px;
+}
+
+/* The .hero class was changed to .container because it adds a bit more detail to the role of the code in the html file. */
+
+.container {
     height: 800px;
     width: 100%;
     margin-bottom: 25px;
@@ -89,22 +101,34 @@ p {
     background-color: #2589bd;
 }
 
-.benefit-lead {
+/*  The following were modified to make the code more concise. since we are in a class, we can simply use that class as an identifier for the elements we want to apply modifications to (in this case the articles). Making classes for each article is not necessary and decreases the cleanliness of our code.*/
+
+.benefits article {
     margin-bottom: 32px;
-    /* color: #ffffff; */
+    color: #ffffff;
+}
+
+/* .benefit-lead {
+    margin-bottom: 32px;
+    color: #ffffff;
 }
 
 .benefit-brand {
     margin-bottom: 32px;
-    /* color: #ffffff; */
+    color: #ffffff;
 }
 
 .benefit-cost {
     margin-bottom: 32px;
-    /* color: #ffffff; */
+    color: #ffffff;
+} */
+
+.benefits h3 {
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-.benefit-lead h3 {
+/* .benefit-lead h3 {
     margin-bottom: 10px;
     text-align: center;
 }
@@ -117,9 +141,14 @@ p {
 .benefit-cost h3 {
     margin-bottom: 10px;
     text-align: center;
+} */
+.benefits img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
 }
 
-.benefit-lead img {
+/* .benefit-lead img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
@@ -135,69 +164,59 @@ p {
     display: block;
     margin: 10px auto;
     max-width: 150px;
-}
+} */
 
-.search-engine-optimization {
+/* the following were modified to all match their respective ID's. Previously there were a few classes mixed in. Since these are all unique in the index.html file, assigning the corresponding articles with ID's makes more sense. */
+#search-engine-optimization {
     margin-bottom: 20px;
     padding: 50px;
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
-    /* color: #ffffff; */
+    color: #ffffff;
 }
 
-.online-reputation-management {
+#online-reputation-management {
     margin-bottom: 20px;
     padding: 50px;
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
-    /* color: #ffffff; */
+    color: #ffffff;
 }
 
-.social-media-marketing {
+#social-media-marketing {
     margin-bottom: 20px;
     padding: 50px;
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
-    /* color: #ffffff; */
+    color: #ffffff;
 }
 
-.search-engine-optimization img {
+#search-engine-optimization img {
     max-height: 200px;
 }
 
-.online-reputation-management img {
+#online-reputation-management img {
     max-height: 200px;
 }
 
-.social-media-marketing img {
+#social-media-marketing img {
     max-height: 200px;
 }
 
-.search-engine-optimization h2 {
+#search-engine-optimization h2 {
     margin-bottom: 20px;
     font-size: 36px;
 }
 
-.online-reputation-management h2 {
+#online-reputation-management h2 {
     margin-bottom: 20px;
     font-size: 36px;
 }
 
-.social-media-marketing h2 {
+#social-media-marketing h2 {
     margin-bottom: 20px;
     font-size: 36px;
-}
-
-.footer {
-    padding: 30px;
-    clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-}
-
-.footer h2 {
-    font-size: 20px;
 }
